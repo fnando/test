@@ -1,0 +1,11 @@
+---
+name: Windows
+on: [push]
+jobs:
+  installer:
+    runs-on: windows-latest
+    steps:
+      - run: choco install innosetup -y
+      - shell: powershell
+        run: |
+          ISCC.exe
