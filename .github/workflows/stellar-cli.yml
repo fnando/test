@@ -1,0 +1,16 @@
+---
+name: Stellar CLI
+on: [push]
+jobs:
+  cli_windows:
+    runs-on: windows-latest
+    steps:
+      - uses: fnando/test@main
+        with:
+          version: v23.1.4
+  cli_linux:
+    runs-on: linux-latest
+    steps:
+      - uses: fnando/test@main
+        with:
+          version: v23.1.4
